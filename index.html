@@ -1,0 +1,416 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stuti's Little Universe ✨</title>
+    <meta name="description" content="A magical birthday experience created with love for Stuti.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="stars" id="stars"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#home" class="logo">♡ Stuti's Universe</a>
+
+        <button id="musicBtn" class="music-btn">
+            ♫ Play Music
+        </button>
+    </nav>
+
+    <!-- 1. WELCOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">A little surprise made just for you</p>
+
+            <h1>
+                Welcome to<br>
+                <span>Stuti's Little Universe</span>
+            </h1>
+
+            <p class="hero-description">
+                A world filled with memories, laughter,
+                surprises and lots of love.
+            </p>
+
+            <button class="main-btn" onclick="enterUniverse()">
+                Enter Your Universe ✨
+            </button>
+
+        </div>
+
+        <div class="hero-photo">
+            <img src="assets/images/stuti-hero.jpeg"
+                 alt="Stuti"
+                 onerror="this.alt='Stuti photo unavailable'">
+
+            <span class="photo-caption">The birthday girl ♡</span>
+        </div>
+
+        <span class="floating-heart">♡</span>
+        <span class="floating-star">✦</span>
+
+    </section>
+
+    <!-- 2. BIRTHDAY CELEBRATION -->
+    <section class="section birthday-section" id="birthday">
+
+        <p class="eyebrow">Today is all about you</p>
+
+        <h2>Happy Birthday, <span>Stuti!</span> 🎂</h2>
+
+        <p class="section-description">
+            Another year of being wonderful, crazy,
+            beautiful and completely yourself.
+        </p>
+
+        <div class="cake-container">
+
+            <div class="cake" id="cake">🎂✨</div>
+
+            <button class="main-btn" id="candleBtn">
+                Blow the candles 🕯️
+            </button>
+
+            <p id="candleMessage"></p>
+
+        </div>
+
+    </section>
+
+    <!-- 3. BIRTHDAY VIDEO MESSAGES -->
+    <section class="video-memories-section" id="video-memories">
+
+        <div class="video-heading">
+
+            <span class="video-eyebrow">
+                A LITTLE SURPRISE FOR YOU
+            </span>
+
+            <h2>Messages Made With Love 💗</h2>
+
+            <p>
+                Seven videos, seven little moments,
+                and so much love from your favourite people.
+            </p>
+
+        </div>
+
+        <div class="video-player-card">
+
+            <div class="video-counter" id="videoCounter">
+                VIDEO 01 OF 07
+            </div>
+
+            <div class="video-frame">
+
+                <video
+                    id="birthdayVideo"
+                    controls
+                    playsinline
+                    preload="metadata"
+                >
+                    <source
+                        src="assets/videos/friend-1.mp4"
+                        type="video/mp4"
+                    >
+                    Your browser does not support video playback.
+                </video>
+
+            </div>
+
+            <div class="video-details">
+
+                <span class="video-tag" id="videoTag">
+                    FROM YOUR FRIENDS
+                </span>
+
+                <h3 id="videoTitle">
+                    A Message For Stuti 💕
+                </h3>
+
+                <p id="videoDescription">
+                    A little birthday love, just for you.
+                </p>
+
+            </div>
+
+            <div class="video-navigation">
+
+                <button
+                    type="button"
+                    id="previousVideo"
+                    class="video-nav-btn"
+                >
+                    ← Previous
+                </button>
+
+                <button
+                    type="button"
+                    id="nextVideo"
+                    class="video-nav-btn next-video-btn"
+                >
+                    Next Video →
+                </button>
+
+            </div>
+
+        </div>
+
+        <p class="video-footer-note">
+            Made with love, collected with memories. ✨
+        </p>
+
+    </section>
+
+
+<!-- FRIENDS MEMORIES -->
+
+<section class="section friends-section" id="friends">
+
+    <p class="eyebrow">The people who make life brighter</p>
+
+    <h2>Beautiful Moments <span>With Friends</span> 🫶</h2>
+
+    <p class="section-description">
+        The laughter, the madness, the little adventures
+        and the memories that make life unforgettable.
+        Here's to the people who make every moment special.
+    </p>
+
+    <div class="photo-grid" id="friendsGallery"></div>
+
+    <p class="friends-footer">
+        Different people, countless memories, one beautiful journey. ♡
+    </p>
+
+</section>
+
+<!-- END FRIENDS MEMORIES -->
+
+    <!-- 4. ELISHIBA AND STUTI -->
+    <section class="section family-section" id="elishiba">
+
+        <p class="eyebrow">Beautiful bonds</p>
+
+        <h2>Elishiba <span>& Stuti</span> 🌸</h2>
+
+        <p class="section-description">
+            Some people make life brighter just by being in it.
+            Here's to the beautiful bond you share.
+        </p>
+
+        <div class="photo-grid" id="elishibaGallery"></div>
+
+    </section>
+
+    <!-- 5. MOTHER'S LOVE -->
+    <section class="section mother-section" id="mother">
+
+        <p class="eyebrow">A bond beyond words</p>
+
+        <h2>A Mother's <span>Love</span> ❤️</h2>
+
+        <p class="section-description">
+            A mother's love is one of life's most beautiful gifts.
+            A lifetime of care, warmth and unconditional love.
+        </p>
+
+        <div class="photo-grid" id="motherGallery"></div>
+
+    </section>
+
+    <!-- 6. ABI AND STUTI -->
+    <section class="section sibling-section" id="memories">
+
+        <p class="eyebrow">My favourite memories</p>
+
+        <h2>Me <span>& You</span> 🤍</h2>
+
+        <p class="section-description">
+            From silly moments to unforgettable memories,
+            every picture has a story.
+        </p>
+
+        <div class="photo-grid sibling-grid" id="siblingGallery"></div>
+
+    </section>
+
+    <!-- 7. ELEVEN SURPRISES -->
+    <section class="section surprises-section" id="surprises">
+
+        <p class="eyebrow">Something special is waiting</p>
+
+        <h2>11 Little <span>Surprises</span> 🎁</h2>
+
+        <p class="section-description">
+            Eleven little gifts, just for you.
+            Tap each box to unlock a surprise!
+        </p>
+
+        <div class="gift-grid" id="giftGrid"></div>
+
+    </section>
+
+    <!-- 8. SIBLING QUIZ -->
+    <section class="section quiz-section" id="quiz">
+
+        <p class="eyebrow">Let's see how well you know us</p>
+
+        <h2>The Sibling <span>Quiz</span> 😂</h2>
+
+        <div class="quiz-card">
+
+            <p class="quiz-count" id="quizCount">
+                Question 1 of 4
+            </p>
+
+            <h3 id="question">Who is more annoying?</h3>
+
+            <div class="quiz-options" id="quizOptions"></div>
+
+            <p id="quizFeedback"></p>
+
+            <button class="main-btn" id="nextQuestion" hidden>
+                Next Question →
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- 9. LETTER FROM BROTHER -->
+    <section class="section letter-section" id="letter">
+
+        <p class="eyebrow">Something from my heart</p>
+
+        <h2>A Letter From <span>Your Brother</span> 💌</h2>
+
+        <div class="envelope" id="envelope">
+
+            <div class="envelope-icon">💌</div>
+
+            <h3>A little letter for you</h3>
+
+            <p>Tap to open your surprise</p>
+
+            <button class="main-btn" id="openLetter">
+                Open My Letter ❤️
+            </button>
+
+        </div>
+
+        <div class="letter-content" id="letterContent" hidden>
+
+            <h3>Dear Stuti,</h3>
+
+            <p>
+Happy Birthday, Stuti!
+
+Having you in my life is something I will always be grateful for.
+
+Keep smiling, keep being yourself and never stop chasing your dreams.
+
+No matter how much we tease each other, remember that you will always have someone cheering for you.
+
+Wishing you happiness, success and countless beautiful memories.
+
+With lots of love,
+Your Brother ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- 10. FINAL SURPRISE -->
+    <section class="final-section" id="final">
+
+        <div class="final-content">
+
+            <p class="eyebrow">One last thing...</p>
+
+            <h1>
+                Happy Birthday<br>
+                <span>Stuti! ❤️</span>
+            </h1>
+
+            <div class="final-photo">
+
+                <img src="assets/images/sibling-final.jpeg"
+                     alt="Abi and Stuti">
+
+            </div>
+
+            <p>
+                Life is better with you in it.
+                Stay happy, stay crazy and keep shining.
+            </p>
+
+            <h2>With love, Your Brother ♡</h2>
+
+            <button class="main-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                Relive the memories ↺
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- BEAUTIFUL SURPRISE POPUP -->
+    <div class="surprise-overlay" id="surpriseModal">
+
+        <div class="surprise-modal">
+
+            <button class="modal-close" id="closeSurprise"
+                    aria-label="Close popup">×</button>
+
+            <div class="modal-decoration">✦ ♡ ✦</div>
+
+            <div class="modal-icon" id="modalIcon">🌸</div>
+
+            <p class="modal-eyebrow">A LITTLE MESSAGE FOR YOU</p>
+
+            <h2 id="modalTitle">A Little Surprise</h2>
+
+            <p id="modalMessage"></p>
+
+            <div class="modal-decoration bottom-decoration">
+                ✧ Made with love ✧
+            </div>
+
+            <button class="modal-button" id="modalOkay">
+                Close with love ♡
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- MUSIC -->
+    <audio id="backgroundMusic" loop>
+        <source src="assets/music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <footer>
+        Made with love, just for Stuti ♡
+        <p>November 11</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
