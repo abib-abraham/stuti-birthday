@@ -733,14 +733,14 @@ const birthdayVideos = [
     // Uncomment the object below to activate it.
     // ==========================================
 
-    /*
+    
     {
         file: "assets/videos/friend-8.mp4",
         title: "One More Beautiful Wish ✨",
         tag: "FROM YOUR FRIENDS",
         description: "More memories and birthday love."
     },
-    */
+    
 
 
     // SPECIAL MESSAGE FROM ELISHIBA
