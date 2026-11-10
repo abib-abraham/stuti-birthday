@@ -50,9 +50,9 @@ const motherPhotos = [
         caption: "Forever her little girl ♡"
     },
     {
-    image: "assets/images/mother-stuti-3.jpeg",
-    caption: "A mother's love is forever ❤️"
-}
+        image: "assets/images/mother-stuti-3.jpeg",
+        caption: "A mother's love is forever ❤️"
+    }
 ];
 
 
@@ -192,6 +192,7 @@ createGallery("elishibaGallery", elishibaPhotos);
 createGallery("motherGallery", motherPhotos);
 createGallery("siblingGallery", siblingPhotos);
 createGallery("friendsGallery", friendsPhotos);
+
 
 // 4. PHOTO LIGHTBOX
 
@@ -439,8 +440,7 @@ candleBtn.addEventListener("click", function () {
 
     candleBtn.disabled = true;
 
-    // FIX: Move to the birthday video section first.
-    // Previously this skipped directly to Elishiba & Stuti.
+    // Move to the birthday video section first.
 
     setTimeout(function () {
 
@@ -662,6 +662,7 @@ for (let i = 0; i < 30; i++) {
 
 const birthdayVideos = [
 
+    // FRIEND 1
     {
         file: "assets/videos/friend-1.mp4",
         title: "A Message For Stuti 💕",
@@ -669,6 +670,7 @@ const birthdayVideos = [
         description: "A little birthday love, just for you."
     },
 
+    // FRIEND 2
     {
         file: "assets/videos/friend-2.mp4",
         title: "Another Beautiful Wish ✨",
@@ -676,6 +678,7 @@ const birthdayVideos = [
         description: "Another person sending you love."
     },
 
+    // FRIEND 3
     {
         file: "assets/videos/friend-3.mp4",
         title: "A Special Birthday Wish 💗",
@@ -683,6 +686,7 @@ const birthdayVideos = [
         description: "A memory to make you smile."
     },
 
+    // FRIEND 4
     {
         file: "assets/videos/friend-4.mp4",
         title: "More Love, More Memories 🌸",
@@ -690,6 +694,7 @@ const birthdayVideos = [
         description: "Because you deserve all the happiness."
     },
 
+    // FRIEND 5
     {
         file: "assets/videos/friend-5.mp4",
         title: "One More Surprise 🎀",
@@ -697,6 +702,48 @@ const birthdayVideos = [
         description: "The birthday wishes keep coming."
     },
 
+    // FRIEND 6
+    {
+        file: "assets/videos/friend-6.mp4",
+        title: "One Last Wish From A Friend 💖",
+        tag: "FROM YOUR FRIENDS",
+        description: "Another beautiful birthday message, just for you."
+    },
+
+
+    // ==========================================
+    // RESERVED FRIEND VIDEO SLOT 7
+    // Add friend-7.mp4 when the video arrives.
+    // Uncomment the object below to activate it.
+    // ==========================================
+
+    /*
+    {
+        file: "assets/videos/friend-7.mp4",
+        title: "Another Birthday Surprise 💕",
+        tag: "FROM YOUR FRIENDS",
+        description: "Another special message, just for you."
+    },
+    */
+
+
+    // ==========================================
+    // RESERVED FRIEND VIDEO SLOT 8
+    // Add friend-8.mp4 when the video arrives.
+    // Uncomment the object below to activate it.
+    // ==========================================
+
+    /*
+    {
+        file: "assets/videos/friend-8.mp4",
+        title: "One More Beautiful Wish ✨",
+        tag: "FROM YOUR FRIENDS",
+        description: "More memories and birthday love."
+    },
+    */
+
+
+    // SPECIAL MESSAGE FROM ELISHIBA
     {
         file: "assets/videos/elishiba.mp4",
         title: "A Message From Elishiba ❤️",
@@ -704,6 +751,8 @@ const birthdayVideos = [
         description: "Someone special has something to say."
     },
 
+
+    // FINAL MESSAGE FROM ABI
     {
         file: "assets/videos/brother.mp4",
         title: "From Your Brother ❤️",
@@ -751,8 +800,9 @@ function loadBirthdayVideo(index) {
 
     videoDescription.textContent = video.description;
 
+    // Automatically updates the total video count.
     videoCounter.textContent =
-        `VIDEO ${String(index + 1).padStart(2, "0")} OF 07`;
+        `VIDEO ${String(index + 1).padStart(2, "0")} OF ${String(birthdayVideos.length).padStart(2, "0")}`;
 
     previousVideo.disabled = index === 0;
 
