@@ -102,7 +102,16 @@ const friendsPhotos = [
     {
         image: "assets/images/friends-5.jpeg",
         caption: "Memories worth keeping forever ❤️"
-    }
+    },
+    {
+    image: "assets/images/friends-6.jpeg",
+    caption: "More beautiful memories together ❤️"
+},
+{
+    image: "assets/images/friends-7.jpeg",
+    caption: "Friends forever, memories forever ✨"
+}
+    
 ];
 
 
